@@ -27,26 +27,29 @@ HTML document. Use this [cheat sheet](https://htmlcheatsheet.com/) on HTML eleme
 
 - All begin with `<` and end with `>`, e.g., `<div>` (this last part is a tag).
 - Most have an opening tag such as `<div>` and a closing tag `</div>`.
-  + The `/` indicates to the browser that that tag is a closing tag.
-  + The element is everything between the tags and the tags themselves.
+  - The `/` indicates to the browser that that tag is a closing tag.
+  - The element is everything between the tags and the tags themselves.
 - Some tags are self-closing like the line break element `<br>`.
 - Elements can have IDs and classes to aid the browser in finding specific tags.
-  + Must begin with a letter A-Z or a-z.
-  + Can be followed by: letters (`A-Za-z`), digits (`0-9`), hyphens (`-`), and underscores (`_`).
-  + IDs **can** only be used once per page. E.g.: `<div id="this-special-div"></div>`.
-  + Classes can be used as many times as you want. E.g.: `<div class="a-less-special-div"></div>`.
+  - Must begin with a letter A-Z or a-z.
+  - Can be followed by: letters (`A-Za-z`), digits (`0-9`), hyphens (`-`), and underscores (`_`).
+  - IDs **can** only be used once per page. E.g.: `<div id="this-special-div"></div>`.
+  - Classes can be used as many times as you want. E.g.: `<div class="a-less-special-div"></div>`.
 - Elements nested inside other elements are called children.
-  + Children inherit attributes from their parents.
-  + Don't nest everything.
+  - Children inherit attributes from their parents.
+  - Don't nest everything.
 - Elements next to one another are siblings.
-  + Siblings do not inherit from one another but are important for selecting in CSS.
+  - Siblings do not inherit from one another but are important for selecting in CSS.
 
 Here is an example of element relations:
 
 ```html
-<div>  <!-- the parent element -->
-  <p></p>  <!-- the first sibling element/the first child-->
-  <p></p>  <!-- the second sibling element/the second child -->
+<div>
+  <!-- the parent element -->
+  <p></p>
+  <!-- the first sibling element/the first child-->
+  <p></p>
+  <!-- the second sibling element/the second child -->
 </div>
 ```
 
@@ -61,20 +64,20 @@ information appear clear and engaging.
 
 ### CSS selectors
 
-  - They select elements to assign them styles.
-  - `*` (wildcard) selects every element.
-  - An element, such as `div`, will select all elements of that type.
-  - They select an id like `#some-id`
-  - Classes are selected like this `.some-class`
-  - To select all children elements of a parent do something like this `div p`
-  - To select multiple different elements separate them by commas like this `div, p, a`
+- They select elements to assign them styles.
+- `*` (wildcard) selects every element.
+- An element, such as `div`, will select all elements of that type.
+- They select an id like `#some-id`
+- Classes are selected like this `.some-class`
+- To select all children elements of a parent do something like this `div p`
+- To select multiple different elements separate them by commas like this `div, p, a`
 
 Here's an example of CSS styling:
 
 ```css
 * {
-  color: red;  /* color in CSS refers to font color */
-}  /* all elements will have red font */
+  color: red; /* color in CSS refers to font color */
+} /* all elements will have red font */
 ```
 
 ## Make a CSS Rainbow
@@ -100,9 +103,9 @@ Let's fix this by adding the style sheet to the `head`:
 
 ```html
 <head>
-...
-  <link rel="stylesheet" type="text/css" href="main.css">
-...
+  ...
+  <link rel="stylesheet" type="text/css" href="main.css" />
+  ...
 </head>
 ```
 
@@ -133,7 +136,7 @@ these numbers are actually letters. The lowest single digit number in hex is `0`
 and the highest single digit number is `f`. This table might help to visualize
 what we mean by this.
 
-```
+```txt
 Decimal Numbers:      0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
 Hexadecimal Numbers:  0, 1, 2, 3, 4, 5, 6, 7, 8, 9,  a,  b,  c,  d,  e,  f, 10
 ```
@@ -162,16 +165,15 @@ would be the color that they have to be. It could be something random, but good
 names make for semantic code. So let's give the outermost div the id red.
 
 ```html
-<div id="red">
-  ...
-</div>
+<div id="red">...</div>
 ```
 
 To give that id some CSS attributes we'll go into `main.css`, select the id,
 and mark its color as red.
 
 ```css
-#red { /* this selects any elements with the red id */
+#red {
+  /* this selects any elements with the red id */
   border-top-color: #f00;
 }
 ```
